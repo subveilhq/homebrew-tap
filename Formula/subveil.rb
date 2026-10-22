@@ -5,20 +5,20 @@
 class Subveil < Formula
   desc "PostgreSQL subsetting and deterministic PII anonymization"
   homepage "https://github.com/subveilhq/subveil"
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/subveilhq/subveil/releases/download/v0.1.4/subveil_0.1.4_darwin_amd64.tar.gz"
-      sha256 "38843b9f6c6814ae550771e48f529f6188a9163822de83fcd6213f128d734062"
+      url "https://github.com/subveilhq/subveil/releases/download/v0.1.5/subveil_0.1.5_darwin_amd64.tar.gz"
+      sha256 "dda15c02b24ad18ccf1fbab5cba1114aac0f7f0f702e82433f1f66f1bee030b8"
 
       define_method(:install) do
         bin.install "subveil"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/subveilhq/subveil/releases/download/v0.1.4/subveil_0.1.4_darwin_arm64.tar.gz"
-      sha256 "8e2fb2b5dada2830c4d31d94aa25bbfebccf7a761ef9ea9724d18139e558f47c"
+      url "https://github.com/subveilhq/subveil/releases/download/v0.1.5/subveil_0.1.5_darwin_arm64.tar.gz"
+      sha256 "8290e8a58bdd6de472df93d74e19e55c0908748e1dcb055eb5a75419d3123d08"
 
       define_method(:install) do
         bin.install "subveil"
@@ -28,15 +28,15 @@ class Subveil < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/subveilhq/subveil/releases/download/v0.1.4/subveil_0.1.4_linux_amd64.tar.gz"
-      sha256 "e8fe6b68f116dc2905bf35f5f73c8e77ff84c2a778a142ce7cef70270963e29a"
+      url "https://github.com/subveilhq/subveil/releases/download/v0.1.5/subveil_0.1.5_linux_amd64.tar.gz"
+      sha256 "d0724afef522ad487218f85bf909509f9264c03c6cb823ce98ca53552ae4ff3d"
       define_method(:install) do
         bin.install "subveil"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/subveilhq/subveil/releases/download/v0.1.4/subveil_0.1.4_linux_arm64.tar.gz"
-      sha256 "e2d8753c4a35fde9574acf64a00120a2cb51d1ece715797628d6a220ae365de9"
+      url "https://github.com/subveilhq/subveil/releases/download/v0.1.5/subveil_0.1.5_linux_arm64.tar.gz"
+      sha256 "7d4aa9e30fd999272c62715348e136af488b9dbcab5ec490d6a328c7de44c826"
       define_method(:install) do
         bin.install "subveil"
       end
@@ -45,7 +45,8 @@ class Subveil < Formula
 
   def caveats
     <<~EOS
-      `subveil pull --create-schema` needs pg_dump:  brew install libpq
+      `subveil pull --create-schema` needs pg_dump:
+        brew install libpq && brew link --force libpq
     EOS
   end
 
