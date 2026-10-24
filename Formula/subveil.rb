@@ -5,20 +5,20 @@
 class Subveil < Formula
   desc "PostgreSQL subsetting and deterministic PII anonymization"
   homepage "https://subveil.dev"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/subveilhq/releases/releases/download/v0.1.7/subveil_0.1.7_darwin_amd64.tar.gz"
-      sha256 "2bd269390bd1dfb674e4541f55de38eaf8410158291952bfb1f3e3bdbbdde2e9"
+      url "https://github.com/subveilhq/releases/releases/download/v0.1.8/subveil_0.1.8_darwin_amd64.tar.gz"
+      sha256 "1422d5e533849e780aa5ee67b34f525c1b5a16f5df503a3d659cfea4e9da2471"
 
       define_method(:install) do
         bin.install "subveil"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/subveilhq/releases/releases/download/v0.1.7/subveil_0.1.7_darwin_arm64.tar.gz"
-      sha256 "a72890b35a863343677623c7c72e9dfbd5c3ceb26ec295e771f3f29132f0cfbe"
+      url "https://github.com/subveilhq/releases/releases/download/v0.1.8/subveil_0.1.8_darwin_arm64.tar.gz"
+      sha256 "ef5007dd5ab3d89b94929e6dd9961e12f2b4a66a81c858b36a56f9efc51d5a24"
 
       define_method(:install) do
         bin.install "subveil"
@@ -28,15 +28,15 @@ class Subveil < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/subveilhq/releases/releases/download/v0.1.7/subveil_0.1.7_linux_amd64.tar.gz"
-      sha256 "cdf915c8b645778467e0ab9419545af508a6879e77d5fd8a2e21191f66321dd6"
+      url "https://github.com/subveilhq/releases/releases/download/v0.1.8/subveil_0.1.8_linux_amd64.tar.gz"
+      sha256 "505be162e03d54226205f82e9328cf4554a0a819e5ac0f92cad05c79d52e6626"
       define_method(:install) do
         bin.install "subveil"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/subveilhq/releases/releases/download/v0.1.7/subveil_0.1.7_linux_arm64.tar.gz"
-      sha256 "2ba97e628aee6cc42bd31854257c68ef8248fe0e75692ec9e776ee9c7fb4394d"
+      url "https://github.com/subveilhq/releases/releases/download/v0.1.8/subveil_0.1.8_linux_arm64.tar.gz"
+      sha256 "eea4f9a7fbdeffc9b6f7588786440b41fc58f4ce9fa439446714303a728908fc"
       define_method(:install) do
         bin.install "subveil"
       end
