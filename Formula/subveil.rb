@@ -10,7 +10,7 @@ class Subveil < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/subveilhq/releases/releases/download/v0.2.1/subveil_0.2.1_darwin_amd64.tar.gz"
-      sha256 "540679d7f70a7505ebd85b9b95ee108e24d30079e77afa9a10d90e384a24ffae"
+      sha256 "d1872e997b8ca0a9918702e282eb312103833684e691d1c9423e2efdc675f0ae"
 
       define_method(:install) do
         bin.install "subveil"
@@ -18,7 +18,7 @@ class Subveil < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/subveilhq/releases/releases/download/v0.2.1/subveil_0.2.1_darwin_arm64.tar.gz"
-      sha256 "d9b58161f36a0312bec03ea7e846c9f15619bb46b0e8114941f4b77371192413"
+      sha256 "9a59677d6691ff2a90dd661fc5db7b8c7a4365e26cd8ea56946b5b34a4573a38"
 
       define_method(:install) do
         bin.install "subveil"
@@ -29,14 +29,14 @@ class Subveil < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/subveilhq/releases/releases/download/v0.2.1/subveil_0.2.1_linux_amd64.tar.gz"
-      sha256 "24d5af324478709a0a5db68165889a656fb95319e3b64ce18810362d8d5fcc33"
+      sha256 "453f62788b962c297df561cd33ad9315bb92e8c67478d402f0cda8cff7cac60d"
       define_method(:install) do
         bin.install "subveil"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/subveilhq/releases/releases/download/v0.2.1/subveil_0.2.1_linux_arm64.tar.gz"
-      sha256 "4369658d81ee1fc20207bf07a4e76c5c18bd6ad1112ac5097e04fdc41583de1f"
+      sha256 "e96f3793a2f776c3d161ceb7da9788d092a8c6833d0b4785311297d258384399"
       define_method(:install) do
         bin.install "subveil"
       end
